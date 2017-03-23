@@ -54,7 +54,7 @@ class New_Toplevel_1:
         _ana2color = '#d9d9d9' # X11 color: 'gray85' 
 
         top.geometry("181x188+424+117")
-        top.title("New Toplevel 1")
+        top.title("PkgDecrypt-Frontend")
 
 
 
