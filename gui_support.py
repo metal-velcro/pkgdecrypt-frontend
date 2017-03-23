@@ -41,20 +41,20 @@ def extract():
         print outputFolder
     except NameError:
         global outputFolder
-        outputFolder = os.path.dirname(filename)
+        outputFolder = os.path.dirname(filename) +"/output"
         print outputFolder
 
     if sys.platform.__contains__("linux"):
-        os.system("./pkg_dec '"+filename+"' '"+outputFolder+"/output'")
+        os.system('./pkg_dec "'+filename+'" "'+outputFolder+'"')
         os.remove("out.bin")
         tkMessageBox.showinfo(title='File Selection', message='Extraction Complete!')
     if sys.platform.__contains__("win"):
-        os.system("pkg_dec.exe '"+filename+"' '"+outputFolder+"/output'")
+        os.system('pkg_dec.exe "'+filename+'" "'+outputFolder+'"')
         os.remove("out.bin")
         tkMessageBox.showinfo(title='File Selection', message='Extraction Complete!')
     sys.stdout.flush()
 
-    openFolder(outputFolder + "/output")
+    openFolder(outputFolder)
 
 def input():
     global filename
